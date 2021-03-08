@@ -21,6 +21,7 @@ if yes?('deviseのユーザを生成する？(yss/no)')
   generate 'devise:install'
   generate 'devise user'
 end
+run 'rm -rf db/seeds.rb'
 generate 'safaripark:install' if yes?('safariparkの管理画面生成する?(yss/no)')
 run 'yarn'
 run 'bundle install'
