@@ -1,6 +1,6 @@
 # Usage
 ```
-rails new your-cms-name -d mysql -m https://github.com/ratovia/rails-template/blob/master/cms-template.rb
+rails new your-cms-name -d mysql -m https://raw.githubusercontent.com/ratovia/rails-template/master/cms-template.rb
 cd your-cms-name
 rails s
 ```
