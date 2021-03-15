@@ -25,8 +25,9 @@ run 'rm -rf db/seeds.rb'
 generate 'safaripark:install' if yes?('safariparkの管理画面生成する?(yss/no)')
 run 'yarn'
 run 'bundle install'
+rails_command 'db:drop'
 rails_command 'db:create'
-rails_command 'db:migrate'
+rails_command 'db:migrate:reset'
 rails_command 'db:seed'
 
 if yes?('gitの初期化する？(yss/no)')
