@@ -29,8 +29,10 @@ rails_command 'db:create'
 rails_command 'db:migrate'
 rails_command 'db:seed'
 
-after_bundle do
-  git :init
-  git add: "."
-  git commit: %Q{ -m 'initialize repository' }
+if yes?('gitの初期化する？(yss/no)')
+  after_bundle do
+    git :init
+    git add: "."
+    git commit: %Q{ -m 'initialize repository' }
+  end
 end
